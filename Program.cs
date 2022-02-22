@@ -38,11 +38,14 @@ namespace ConsoleApp2
 
         public void Push(T item)
         {
-            max = queue.Last.Value.Item2;
-            if (Compare(item) == 1)
-                queue.AddLast(Tuple.Create(item, max));
+            if (queue.Count == 0)
+                queue.AddLast(Tuple.Create(item, item));
             else
-                queue.AddLast(item, queue[queue.Count - 1].Item2);
+                if (Compare(item) == -1)
+                  queue.AddLast(Tuple.Create(item, max));
+                else
+                    queue.AddLast(Tuple.Create(item, queue.Last.Value.Item2));
+            max = queue.Last.Value.Item2;
         }
 
         public T Pop()
