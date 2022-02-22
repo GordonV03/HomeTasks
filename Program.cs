@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+/*Гордон Вячеслав*/
+
 namespace ConsoleApp2
 {
     class Program
