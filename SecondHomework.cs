@@ -17,12 +17,12 @@ namespace ConsoleApp2
         LinkedList<T> stack1 = new LinkedList<T>();
         LinkedList<T> stack2 = new LinkedList<T>();
 
-        public void Push(T item)
+        public void Enqueue(T item)
         {
             stack1.AddLast(item);
         }
 
-        public T Pop()
+        public T Dequeue()
         {
             if (stack2.Count == 0)
                 while (stack1.Count != 0)
