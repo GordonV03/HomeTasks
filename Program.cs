@@ -10,7 +10,7 @@ namespace ConsoleApp2
             
         }
     }
-
+    //aa
     class Queue<T>
         where T: IComparable<T>
     {
