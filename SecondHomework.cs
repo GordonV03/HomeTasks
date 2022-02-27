@@ -27,7 +27,9 @@ namespace ConsoleApp2
             if (stack2.Count == 0)
                 while (stack1.Count != 0)
                     stack2.AddLast(stack1.Last);
-            return stack2.Last.Value;
+            var result = stack2.Last.Value;
+            stack2.RemoveLast();
+            return result;
         }
     }
 }
