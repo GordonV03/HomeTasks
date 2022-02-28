@@ -25,17 +25,15 @@ namespace ConsoleApp2
                     else
                     if (Value(Stack.stack.Last.Value) >= Value(x[i]))
                     {
-                        if (Stack.stack.Count() > 1)
-                            while (Value(Stack.stack.Last.Value) >= Value(Stack.stack.Last.Previous.Value) && Stack.stack.Count() > 1)
-                            {
-                                Queue.Enqueue(Stack.stack.Last.Value);
-                                Stack.Pop();
-                            }
+                        while (Stack.stack.Count() > 1 && Value(Stack.stack.Last.Value) >= Value(Stack.stack.Last.Previous.Value))
+                        {
+                            Queue.Enqueue(Stack.stack.Last.Value);
+                            Stack.Pop();
+                        }                       
                         Queue.Enqueue(Stack.stack.Last.Value);
                         Stack.Pop();
                         Stack.Push(x[i]);
                     }
-                else
                 if (x[i] == '(')
                     Stack.Push(x[i]);
                 else
@@ -47,16 +45,16 @@ namespace ConsoleApp2
                         Stack.Pop();
                     }
                     Stack.Pop();
-                }    
+                }
             }
             while (Stack.stack.Count() != 0)
             {
                 Queue.Enqueue(Stack.stack.Last.Value);
                 Stack.Pop();
             }
-            Queue.PrintQueue();
+            Console.WriteLine(Queue.StringQueue());
         }
-        
+
         public static int Value(char item)
         {
             if (item == '-' || item == '+')
@@ -68,6 +66,7 @@ namespace ConsoleApp2
             else throw new InvalidOperationException();
         }
     }
+
     class Queue
     {
         public static LinkedList<char> stack1 = new LinkedList<char>();
@@ -86,9 +85,14 @@ namespace ConsoleApp2
             return stack2.Last.Value;
         }
 
-        public static void PrintQueue()
+        public static string StringQueue()
         {
-            Console.WriteLine(Convert.ToString(stack1));
+            StringBuilder postfixEntry = new StringBuilder();
+            foreach (var item in stack1)
+            {
+                postfixEntry.Append(item);
+            }
+            return postfixEntry.ToString();
         }
     }
 
