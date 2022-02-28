@@ -8,13 +8,12 @@ namespace ConsoleApp2
     class PostfixEntry
     {
         public static readonly char[] operations = new char[] { '+', '-', '*', ':' };
-        public static readonly char[] numbers = new char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
         static void Main(string[] args)
         {
             string x = Console.ReadLine();
             for (int i = 0; i <= x.Length - 1; i++)
             {
-                if (numbers.Contains(x[i]) == true)
+                if (char.IsNumber(x[i]) == true)
                     Queue.Enqueue(x[i]);
                 else
                 if (operations.Contains(x[i]))
