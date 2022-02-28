@@ -32,6 +32,8 @@ namespace ConsoleApp2
                                 Queue.Enqueue(Stack.stack.Last.Value);
                                 Stack.Pop();
                             }
+                        Queue.Enqueue(Stack.stack.Last.Value);
+                        Stack.Pop();
                         Stack.Push(x[i]);
                     }
                 else
