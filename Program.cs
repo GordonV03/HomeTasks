@@ -1,33 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace ConsoleApp2
+namespace Game
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        [STAThread]
+        static void Main()
         {
-            
-        }
-    }
-    //aa
-    class Queue<T>
-        where T: IComparable<T>
-    {
-        LinkedList<T> stack1 = new LinkedList<T>();
-        LinkedList<T> stack2 = new LinkedList<T>();
-
-        public void Push(T item)
-        {
-            stack1.AddLast(item);
-        }
-
-        public T Pop()
-        {
-            if (stack2.Count == 0)
-                while (stack1.Count != 0)
-                    stack2.AddLast(stack1.Last);
-            return stack2.Last.Value;
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
     }
 }
