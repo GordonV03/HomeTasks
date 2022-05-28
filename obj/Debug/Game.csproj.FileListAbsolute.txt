@@ -1,0 +1,11 @@
+D:\Проекты C#\Game\bin\Debug\Game.exe.config
+D:\Проекты C#\Game\bin\Debug\Game.exe
+D:\Проекты C#\Game\bin\Debug\Game.pdb
+D:\Проекты C#\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+D:\Проекты C#\Game\obj\Debug\Game.Form1.resources
+D:\Проекты C#\Game\obj\Debug\Game.Properties.Resources.resources
+D:\Проекты C#\Game\obj\Debug\Game.csproj.GenerateResource.cache
+D:\Проекты C#\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+D:\Проекты C#\Game\obj\Debug\Game.exe
+D:\Проекты C#\Game\obj\Debug\Game.pdb
+D:\Проекты C#\Game\obj\Debug\Game.Resource1.resources
